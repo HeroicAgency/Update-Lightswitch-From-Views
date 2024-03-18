@@ -1,0 +1,65 @@
+{
+    "name": "heroic/update-lightswitch-from-views",
+    "description": "Update your lightswitch field checkboxes from the Control Panel views! No more do you need to edit an entry, click the lightswitch, click save, exit, repeat.  Just update it from the views now.  For Craft 4.3.5+ / 5+.",
+    "type": "craft-plugin",
+    "license": "proprietary",
+    "keywords": [
+        "Lightswitch",
+        "Views",
+        "Control Panel",
+        "Ajax",
+        "Checkbox",
+        "Update in Views",
+        "Ajax"
+    ],
+    "authors": [
+        {
+            "name": "Heroic",
+            "homepage": "https://www.github.com/heroicagency"
+        }
+    ],
+    "support": {
+        "email": "hello@heroic.art",
+        "issues": "https://github.com/HeroicAgency/Update-Lightswitch-From-Views/issues?state=open",
+        "source": "https://github.com/HeroicAgency/Update-Lightswitch-From-Views",
+        "docs": "https://github.com/HeroicAgency/Update-Lightswitch-From-Views",
+        "rss": "https://github.com/HeroicAgency/Update-Lightswitch-From-Views/releases.atom"
+    },
+    "require": {
+        "php": ">=8.0.2",
+        "craftcms/cms": "^4.3.5"
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main",
+        "craftcms/phpstan": "dev-main",
+        "aws/aws-sdk-php": "^3.298"
+    },
+    "autoload": {
+        "psr-4": {
+            "heroic\\updatelightswitchfromviews\\": "src/"
+        }
+    },
+    "extra": {
+        "handle": "update-lightswitch-from-views",
+        "name": "Update your lightswitch field checkboxes from the Control Panel views!",
+        "developer": "Heroic",
+        "documentationUrl": "https://github.com/HeroicAgency/Update-Lightswitch-From-Views",
+        "class": "heroic\\updatelightswitchfromviews\\UpdateLightswitchFromViews"
+    },
+    "scripts": {
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --ansi --fix",
+        "phpstan": "phpstan --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
+

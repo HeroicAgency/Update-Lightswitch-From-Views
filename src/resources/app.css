@@ -1,0 +1,20 @@
+/* for custom checkbox module */
+.checkbox-icon {
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+.checkbox-icon:hover {
+    background-color: var(--notice-color);
+}
+.checkbox-icon.unchecked {
+    opacity:0.1;
+    filter: grayscale(1);
+}
+.checkbox-icon.unchecked:hover {
+    filter: grayscale(0);
+    opacity:0.5;
+    background-color: var(--notice-color);
+}
+.checkbox-icon.unchecked:before {
+    opacity:0;
+}
