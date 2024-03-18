@@ -1,6 +1,6 @@
 {
-    "name": "heroic/update-lightswitch-from-views",
-    "description": "Update your lightswitch field checkboxes from the Control Panel views! No more do you need to edit an entry, click the lightswitch, click save, exit, repeat.  Just update it from the views now.  For Craft 4.3.5+ / 5+.",
+    "name": "heroic/craft-lightswitch-views",
+    "description": " No more do you need to edit an entry, click the lightswitch, click save, exit, repeat.  Just update it from the views now by clicking the checkbox.  For Craft 4.3.5+ / 5+.",
     "type": "craft-plugin",
     "license": "proprietary",
     "keywords": [
@@ -31,20 +31,19 @@
     },
     "require-dev": {
         "craftcms/ecs": "dev-main",
-        "craftcms/phpstan": "dev-main",
-        "aws/aws-sdk-php": "^3.298"
+        "craftcms/phpstan": "dev-main"
     },
     "autoload": {
         "psr-4": {
-            "heroic\\updatelightswitchfromviews\\": "src/"
+            "heroic\\craftlightswitchviews\\": "src/"
         }
     },
     "extra": {
-        "handle": "update-lightswitch-from-views",
-        "name": "Update your lightswitch field checkboxes from the Control Panel views!",
+        "handle": "lightswitch-views",
+        "name": "Update Lightswitch Field Checkboxes from the Control Panel Views",
         "developer": "Heroic",
         "documentationUrl": "https://github.com/HeroicAgency/Update-Lightswitch-From-Views",
-        "class": "heroic\\updatelightswitchfromviews\\UpdateLightswitchFromViews"
+        "class": "heroic\\craftlightswitchviews\\LightswitchViews"
     },
     "scripts": {
         "check-cs": "ecs check --ansi",

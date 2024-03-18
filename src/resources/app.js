@@ -23,6 +23,7 @@ $(document).ready(function() {
         } else {
             $(this).addClass('unchecked');
         }
+        let t= $(this)
 
         let formData = new FormData();
         formData.append('CRAFT_CSRF_TOKEN', pluginCsrf);
@@ -44,6 +45,12 @@ $(document).ready(function() {
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log('Error:', jqXHR, textStatus, errorThrown);
                 alert(condenseResponseJSON(jqXHR.responseJSON));
+
+                if (t.hasClass('unchecked')) {
+                    t.removeClass('unchecked');
+                } else {
+                    t.addClass('unchecked');
+                }
             }
         });
     }

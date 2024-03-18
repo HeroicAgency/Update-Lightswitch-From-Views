@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\updatelightswitchfromviews\controllers;
+namespace modules\lightswitchviews\controllers;
 
 use craft\web\Controller;
 

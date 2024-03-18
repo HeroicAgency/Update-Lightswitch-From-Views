@@ -1,7 +1,8 @@
 <?php
-namespace modules\updatelightswitchfromviews;
+namespace heroic\craftlightswitchviews;
 use Craft;
 use craft\base\Element;
+use craft\base\Plugin;
 use craft\events\SetElementTableAttributeHtmlEvent;
 use craft\helpers\Html;
 use yii\base\Event;
@@ -9,17 +10,31 @@ use yii\base\Module;
 use craft\web\View;
 
 /**
- * updatelightswitchfromviews module
+ * lightswitch-views module
  *
- * @method static UpdateLightswitchFromViews getInstance()
+ * @method static lightswitchviews getInstance()
  */
-class UpdateLightswitchFromViews extends Module
+class LightswitchViews extends Plugin
 {
+    public string $schemaVersion = '1.0.0';
+    public bool $hasCpSettings = false;
+
+    public static function config(): array
+    {
+        return [
+            'components' => [
+                // Define component configs here...
+            ],
+        ];
+    }
+
+
     public function init(): void
     {
         parent::init();
 
-        \Craft::setAlias('@updatelightswitchfromviews', __DIR__);
+        Craft::setAlias('@craftlightswitchviews', __DIR__);
+
 
         if (Craft::$app->getRequest()->getIsConsoleRequest()) {
             //$this->controllerNamespace = 'modules\\console\\controllers';
@@ -33,7 +48,7 @@ class UpdateLightswitchFromViews extends Module
             View::EVENT_END_BODY,
             function () {
                 if (\Craft::$app->request->isCpRequest) {
-                    Craft::$app->getView()->registerAssetBundle(UpdateLightswitchFromViewsBundle::class);
+                    Craft::$app->getView()->registerAssetBundle(LightswitchViewsBundle::class);
                 }
             }
         );

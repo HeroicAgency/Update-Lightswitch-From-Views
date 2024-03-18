@@ -30,8 +30,8 @@ Open your terminal and run the following commands:
 cd /path/to/my-project.test
 
 # tell Composer to load the plugin
-composer require heroic/update-lightswitch-from-views
+composer require heroic/lightswitch-views
 
 # tell Craft to install the plugin
-./craft plugin/install update-lightswitch-from-views
+./craft plugin/install lightswitch-views
 ```

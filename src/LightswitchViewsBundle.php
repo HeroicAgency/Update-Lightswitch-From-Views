@@ -1,15 +1,15 @@
 <?php
 
-namespace modules\updatelightswitchfromviews;
+namespace heroic\craftlightswitchviews;
 
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
-class UpdateLightswitchFromViewsBundle extends AssetBundle
+class LightswitchViewsBundle extends AssetBundle
 {
     public function init()
     {
-        $this->sourcePath = '@updatelightswitchfromviews/resources'; // Path to your resources
+        $this->sourcePath = '@craftlightswitchviews/resources'; // Path to your resources
         $this->depends = [CpAsset::class]; // Depend on CP assets
 
         $this->js = [
